@@ -18,6 +18,9 @@
             "email": "semilore@example.com"
         }
     ],
+    "scripts": {
+        "test": "pest"
+    },
     "require-dev": {
         "pestphp/pest": "^4.7"
     },
