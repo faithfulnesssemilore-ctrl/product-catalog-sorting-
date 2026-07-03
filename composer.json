@@ -1,0 +1,29 @@
+{
+    "name": "semilore/productcatalogsortingtask",
+    "description": "product catalog sorting task",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+      "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Semilore",
+            "email": "semilore@example.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^4.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
