@@ -1,4 +1,4 @@
-# 🛒 Product Catalog Sorting
+# Product Catalog Sorting
 
 **Engineering Task Submission**  
 
@@ -53,14 +53,7 @@ test('it sorts products by price', function () {
 });
 ```
 
-This style makes the test suite read more like a **product specification** than traditional test code, making it easier for:
-
-- Developers
-- QA Engineers
-- Product Managers
-- Technical Reviewers
-
-to understand the expected business behavior without digging through complex testing structures.
+This style makes the test suite read more like a **product specification** than traditional test code, making it easier forme to understand the expected business behavior without digging through complex testing structures.
 
 ---
 
@@ -87,7 +80,7 @@ vendor/bin/pest
 
 ---
 
-# 🧠 Architecture Questions & Answers
+#  Architecture Questions & Answers
 
 ## 1. Which SOLID principles does your design satisfy?
 
@@ -142,7 +135,7 @@ directly to instantiated sorter objects.
 
 This provides:
 
-- Constant-time lookup (**O(1)**)
+- Constant-time lookup
 - Minimal memory overhead
 - Excellent scalability
 - Fast request parsing for incoming API query parameters
@@ -200,12 +193,6 @@ During application startup, a registry scanner would:
 3. Read their attributes using Reflection.
 4. Register them into the registry.
 
-Benefits include:
-
-- No manual registration
-- Easier maintenance
-- Better scalability
-- Reduced risk of human error
 
 ---
 
