@@ -62,7 +62,7 @@ This style makes the test suite read more like a **product specification** than 
 ## 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/faithfulnesssemilore-ctrl/product-catalog-sorting-.git]
+git clone  https://github.com/faithfulnesssemilore-ctrl/product-catalog-sorting-.git
 cd product-catalog-sorter
 ```
 
