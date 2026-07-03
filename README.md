@@ -69,7 +69,7 @@ to understand the expected business behavior without digging through complex tes
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/product-catalog-sorter.git
+git clone [https://github.com/faithfulnesssemilore-ctrl/product-catalog-sorting-.git]
 cd product-catalog-sorter
 ```
 
@@ -91,7 +91,7 @@ vendor/bin/pest
 
 ## 1. Which SOLID principles does your design satisfy?
 
-### ✅ Single Responsibility Principle (SRP)
+###  Single Responsibility Principle (SRP)
 
 Each class has exactly one responsibility.
 
@@ -104,7 +104,7 @@ Every component focuses on a single concern.
 
 ---
 
-### ✅ Open/Closed Principle (OCP)
+###  Open/Closed Principle (OCP)
 
 The application is **open for extension but closed for modification**.
 
@@ -114,7 +114,7 @@ No existing production code needs to be modified.
 
 ---
 
-### ✅ Dependency Inversion Principle (DIP)
+###  Dependency Inversion Principle (DIP)
 
 The `Catalog` class depends on the abstraction (`SorterInterface`) rather than concrete implementations like:
 
@@ -215,9 +215,10 @@ Benefits include:
 src/
 │
 ├── Catalog.php
-├
+├--Enums/SorterDirection.php
 │
 ├── Sorter/
+|   |--AbstractSorter.php
 │   ├── SorterInterface.php
 │   ├── PriceSorter.php
 │   ├── PopularitySorter.php
@@ -244,6 +245,7 @@ The project includes automated tests covering:
 - Division-by-zero protection
 - Invalid sorter requests
 - Strategy chaining
+- No product exist
 
 The goal is to ensure both correctness and long-term maintainability.
 
