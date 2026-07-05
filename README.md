@@ -47,4 +47,4 @@ src/
 tests/
 ```
 
-For the design decisions and architecture, see **DESIGN.md**.
+For the design decisions , see **DESIGN.md**.
