@@ -34,6 +34,10 @@ composer install
 ```bash
 vendor/bin/pest
 ```
+## Run example script
+     ```bash 
+     php index.php    or  php -S localhost:8000 
+```
 
 ## Project Structure
 

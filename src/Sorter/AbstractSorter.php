@@ -11,7 +11,7 @@ abstract class AbstractSorter implements SorterInterface            {
     {
         $this->direction = is_string($direction)
             ? SortDirection::fromString($direction)
-            : $direction;
+            : $direction;//calls the fromString method of the SortDirection enum to convert a string representation of the sorting direction into an instance of the SortDirection enum.
     }
      
     public function sort(array $products): array { // Sorts an array of products based on the comparison logic defined in the compare method.
