@@ -2,37 +2,52 @@
 declare(strict_types=1);
 namespace App\Sorter;
 
+// Combines multiple sorters into priority chain
 class ChainedSorter implements SorterInterface{
     private array $sorters;
 
+    // Validates and stores sorters for chaining
     public function __construct(array $sorters){
+       
         if (count($sorters) < 2) {
             throw new \InvalidArgumentException('ChainedSorter requires at least two sorters.');
         }
-        foreach ($sorters as $sorter) {//verifies that each sorter implements the SorterInterface.
+        // Verify each sorter implements required interface
+        foreach ($sorters as $sorter) {
             if (!($sorter instanceof SorterInterface)) {
                 throw new \InvalidArgumentException('All sorters must implement SorterInterface.');
             }
         }
+        // Re-indexes array and stores for later use 
         $this->sorters = array_values($sorters);
     }
+
+    // Sorts products using chained sorters
     public function sort(array $products): array{
-        if (count($products) === 0) return [];//its a good practice to handle empty arrays.
+        // Return empty array if no products
+        if (count($products) === 0) return [];
 
         $sorted = $products;
-        usort($sorted, function (array $productA, array $productB): int {//starts the sorting process using a custom comparison function.
+        // Apply usort with custom comparison logic
+        usort($sorted, function (array $productA, array $productB): int {
             return $this->compare($productA, $productB);
-        });// Drives the automated arrangement engine.
-        return $sorted;// Returns the sorted array.
+        });
+        // Return final sorted products array
+        return $sorted;
     }
+    // Compares products through sorter chain order
     public function compare(array $productA, array $productB): int{
-        foreach ($this->sorters as $sorter) {// Iterates through each sorter in the chain.
-            $result = $sorter->compare($productA, $productB);// Compares the two products using the current sorter.
+        // Apply each sorter until difference found
+        foreach ($this->sorters as $sorter) {
+            // Get comparison result from current sorter
+            $result = $sorter->compare($productA, $productB);
 
+            // Return immediately if not equal
             if ($result !== 0) {
-                return $result;// If the comparison yields a non-zero result, it returns that result.
+                return $result;
             }
         }
-        return 0;//Absolute tie resolution.
+        // Products are equal across all sorters
+        return 0;
     }
 }
