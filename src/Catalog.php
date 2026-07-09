@@ -8,7 +8,7 @@ use App\Sorter\SorterInterface;
 class Catalog{
    private array $products;// Secure our products data by making it private so that it can only be accessed within the class.
 
-     public function __construct(array $products){ //Initializes the object  when it is created.
+     public function __construct(array $products){ 
         $this->products = $products;//We call the products data and store it in the private property.
      }
      

@@ -26,15 +26,15 @@ $registry->register('newest', new DateSorter(SortDirection::DESC));
 
 echo " HOMEPAGE (popularity - sales count descending) " . PHP_EOL;
 foreach ($catalog->getProducts($registry->get('popularity')) as $home) {
-    echo "This is  {$home['name']} : sales_count = {$home['sales_count']}" . PHP_EOL;
+    echo "<br> This is  {$home['name']} : sales_count = {$home['sales_count']} <br>" . PHP_EOL;
 }
 
 echo "<br>" . " SALE PAGE (price ascending) " . PHP_EOL;
 foreach ($catalog->getProducts($registry->get('price')) as $p) {
-    echo "- {$p['name']} : price = $" . number_format($p['price'], 2) . PHP_EOL;
+    echo "<br>- {$p['name']} : price = $" . number_format($p['price'], 2) . ",<br>" . PHP_EOL ;
 }
 
 echo "<br>" . "NEW ARRIVALS (created date descending) " . PHP_EOL;
 foreach ($catalog->getProducts($registry->get('newest')) as $p) {
-    echo "- {$p['name']} : created = {$p['created_at']}" . PHP_EOL;
+    echo "<br>- {$p['name']}, : created = {$p['created_at']},  ,<br>" . PHP_EOL ;
 }
