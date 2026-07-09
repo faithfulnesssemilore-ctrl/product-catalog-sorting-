@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-The goal of this task was to design a flexible and extensible product sorting engine for an e-commerce platform.
+The goal of this task was to design a flexible and extensible product sorting engine that can accumulate different sorting strategies.
 
 Different sections of the website may require different sorting strategies. For example:
 
@@ -18,11 +18,11 @@ The challenge was to ensure that new sorting strategies can be introduced withou
 
 The solution was designed with the following goals in mind:
 
-* Extensibility
+* Extensibility 
 * Maintainability
 * Reusability
 * Separation of concerns
-* Testability
+
 
 These goals ensure that the system can grow without requiring changes to existing production code.
 
