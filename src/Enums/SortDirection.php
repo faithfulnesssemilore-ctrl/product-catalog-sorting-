@@ -12,8 +12,11 @@ enum SortDirection: string {
         throw new \InvalidArgumentException("Invalid sort direction: '$direction'. Only accepted methods are 'asc' and 'desc'");
      }
 
-     public function multiplier(): int {//This the multiplier method that will return a value of 1 for ascending order and -1 for descending order. This is useful for sorting algorithms that require a multiplier to determine the order of elements.
+     public function multiplier(): int {
         return $this === self::ASC ? 1 : -1;
     }
+    //This the multiplier method that will return a value of 1 for ascending order and -1 for descending order. This is useful for sorting
+    // algorithms that require a multiplier to determine the order of elements.
+    
 
 }

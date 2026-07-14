@@ -26,7 +26,7 @@ $registry->register('newest', new DateSorter(SortDirection::DESC));//register th
 
 echo " HOMEPAGE (popularity - sales count descending) " . PHP_EOL;
 foreach ($catalog->getProducts($registry->get('popularity')) as $home) {
-    echo "<br>   {$home['name']} : sales_count = {$home['sales_count']} <br>" . PHP_EOL;
+    echo "<br>   {$home['name']} : sales_count = {$home['sales_count']} <br>" . PHP_EOL;//We are iterating through the products sorted by popularity and displaying their names and sales counts.
 }
 
 echo "<br>" . " SALE PAGE (price ascending) " . PHP_EOL;
